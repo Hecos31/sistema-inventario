@@ -18,7 +18,7 @@ class Producto:
 def buscar_producto(lista_productos, codigo_buscado):
     for producto in lista_productos:
         if producto.codigo == codigo_buscado:
-            print("Producto disponible") # <-- ¡Atención a esta línea para el conflicto!
+            print("Producto registrado exitosamente") # <-- ¡Atención a esta línea para el conflicto!
             return producto
     print("Producto no encontrado")
     return None
