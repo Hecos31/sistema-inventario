@@ -14,7 +14,19 @@ class Producto:
         print(f"Precio: ${self.precio}")
         print(f"Inventario: {self.existencia} unidades\n")
 
-# Bloque de prueba para verificar que funciona
+# NUEVA FUNCIÓN PARA EL RETO
+def buscar_producto(lista_productos, codigo_buscado):
+    for producto in lista_productos:
+        if producto.codigo == codigo_buscado:
+            print("Producto disponible") # <-- ¡Atención a esta línea para el conflicto!
+            return producto
+    print("Producto no encontrado")
+    return None
+
 if __name__ == "__main__":
-    producto1 = Producto("PROD-001", "Monitor Gamer 24 pulg", 3500.00, 10)
-    producto1.mostrar_informacion()
+    p1 = Producto("PROD-001", "Monitor Gamer", 3500.00, 10)
+    p2 = Producto("PROD-002", "Teclado Mecánico", 850.00, 25)
+    inventario = [p1, p2]
+    
+    # Probar búsqueda
+    buscar_producto(inventario, "PROD-001")
