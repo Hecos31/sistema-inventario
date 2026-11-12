@@ -11,7 +11,7 @@ class Producto:
         print("--- Detalles del Producto ---")
         print(f"Código: {self.codigo}")
         print(f"Nombre: {self.nombre}")
-        print(f"Precio: ${self.precio}")
+        print(f"Precio: ${self.precio})
         print(f"Inventario: {self.existencia} unidades\n")
 
 # NUEVA FUNCIÓN PARA EL RETO
