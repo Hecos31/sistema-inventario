@@ -1,1 +1,34 @@
 
+# 1. Nombre que identifica su función
+name: Verificación y Ejecución de Inventario Python
+
+# 2. Eventos y 3. Rama del repositorio en la que se ejecutará
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  verificar-codigo:
+    # 4. Entorno donde se realizarán las tareas
+    runs-on: ubuntu-latest
+
+    steps:
+      # 5. Descarga del código del repositorio
+      - name: Descargar código fuente
+        uses: actions/checkout@v4
+
+      # 6. Configuración del lenguaje Python
+      - name: Configurar entorno de Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # 7. Verificación de sintaxis y ejecución del script
+      - name: Verificar sintaxis y ejecutar prueba de producto.py
+        run: |
+          python -m py_compile src/producto.py
+          python src/producto.py
