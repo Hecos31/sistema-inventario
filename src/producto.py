@@ -11,14 +11,14 @@ class Producto:
         print("--- Detalles del Producto ---")
         print(f"Código: {self.codigo}")
         print(f"Nombre: {self.nombre}")
-        print(f"Precio: ${self.precio}")
+        print(f"Precio: ${self.precio }")
         print(f"Inventario: {self.existencia} unidades\n")
 
 # NUEVA FUNCIÓN PARA EL RETO
 def buscar_producto(lista_productos, codigo_buscado):
     for producto in lista_productos:
         if producto.codigo == codigo_buscado:
-            print("Producto disponible en inventario") # <-- ¡Atención a esta línea para el conflicto!
+            print("Producto disponible en inventario")
             return producto
     print("Producto no encontrado")
     return None
