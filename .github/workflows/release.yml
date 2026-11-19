@@ -3,7 +3,7 @@ name: Liberacion del Sistema de Inventario
 on:
   push:
     tags:
-      - 'v-*'
+      - 'v-'
 
 permissions:
   contents: write
