@@ -2,7 +2,7 @@ name: Liberacion del Sistema de Inventario
 on:
 push:
 tags:
-- &#39;v*&#39;
+- 'v-*'
 
 permissions:
 contents: write
@@ -15,7 +15,7 @@ uses: actions/checkout@v4
 - name: Preparar Python
 uses: actions/setup-python@v5
 with:
-python-version: &#39;3.12&#39;
+python-version: '3.12'
 - name: Ejecutar pruebas
 run: python -m unittest discover -s tests -v
 - name: Crear paquete
