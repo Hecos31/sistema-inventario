@@ -13,6 +13,7 @@ class Producto:
         print(f"Nombre: {self.nombre}")
         print(f"Precio: ${self.precio }")
         print(f"Inventario: {self.existencia} unidades\n")
+        print(f"Inventario: {self.existencia} unidades\n")
 
 # NUEVA FUNCIÓN PARA EL RETO
 def buscar_producto(lista_productos, codigo_buscado):
